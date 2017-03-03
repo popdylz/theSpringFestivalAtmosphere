@@ -1,0 +1,38 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,button,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,input,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,textarea,tfoot,th,thead,time,tr,tt,u,ul,var,video{box-sizing:border-box;margin:0;padding:0;}
+address,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:400;}
+abbr,body,fieldset,html,iframe,img{border:0;}
+address,cite,dfn,em,i,var{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sub,sup{font-size:83%;}
+code,kbd,pre,samp{font-family:inherit;}
+q:after,q:before{content:none;}
+textarea{overflow:auto;resize:none;}
+input,textarea{outline:0;border:none;background:0 0;-webkit-appearance:none;-webkit-tap-highlight-color:rgba(255,0,0,0);}
+label,summary{cursor:default;}
+a,button{border:none;background:0 0;cursor:pointer;}
+b,em,h1,h2,h3,h4,h5,h6,strong{font-weight:700;}
+a,del,ins,s,u{text-decoration:none;}
+body,button,input,keygen,legend,select,textarea{outline:0;color:#333;font-family:"microsoft yahei",STHeiTi,sans-serif;}
+body{background-color:#fff;}
+a{outline:0;-webkit-tap-highlight-color:rgba(255,0,0,0);}
+body{overflow-x:hidden;}
+area{outline:0;}
+.main-box{overflow-x:hidden;margin:0 auto;padding-bottom: 2rem;width:16rem;background: #C6162D;}
+.qiePian{display:block;width:100%;}
+.headBox{position:relative;}
+.arrow{position:absolute;right:0;bottom:1rem;width:.3413rem;}
+.headlineBox{position:absolute;bottom:0;overflow-x:scroll;width:16rem;}
+.headlinePic{width:28.8rem;height:4.2667rem;}
+.goodsBox{margin:0 auto;width:16rem;background:#C6162D;font-size:0;}
+.goodsPane{display:inline-block;overflow:hidden;margin:0 .064rem .1707rem 0;width:5.2907rem;height:7.5rem;background:#fff;}
+.goodsPane:nth-child(3n){margin-right:0;}
+.goodsShow{width:100%;}
+.goodsName{overflow:hidden;margin:0 auto;width:4.6rem;height:1.12rem;color:#000;font-weight:700;font-size:.5rem;line-height:.56rem;}
+.sale{margin:0 auto;width:4.6rem;height:.8rem;color:#D71820;font-weight:700;font-size:.5rem;line-height:.8rem;}
+.go-top{position:fixed;bottom:.2rem;left:50%;z-index:99;display:none;margin-left:6rem;width:1.7067rem;height:1.7067rem;border-radius:1.0667rem;text-align:center;line-height:1.7067rem;}
+.goTopBg{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border-radius:1.0667rem;background:#000;opacity:.5;}
+.go-top img{width:.7253rem;}

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <title>尝年味</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/hotcss.js"></script>
+        <script src="js/jquery-2.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+
+    <body>
+        <div class="main-box">
+            <img src="img/share.jpg" style="display: block;height: 0;" />
+            <div class="headBox">
+                <img src="img/mainPic_a01.jpg" class="qiePian" />
+                <img src="img/arrow.png" class="arrow" />
+                <div class="headlineBox">
+                    <div class="headlinePic">
+                        <img src="img/headLine.png" class="qiePian" />
+                    </div>
+                </div>
+            </div>
+            <img src="img/mainPic_02.jpg" usemap="#Map" class="qiePian" />
+            <map name="Map">
+				<area shape="rect" coords="11,221,735,646" href="" target="_blank" alt="红尾鱼">
+		    </map>
+            <img src="img/mainPic_03.jpg" usemap="#Map2" class="qiePian" />
+            <map name="Map2">
+				<area shape="rect" coords="10,31,740,357" href="" target="_blank" alt="银鳕鱼">
+				<area shape="rect" coords="9,400,708,799" href="" target="_blank" alt="小黄鱼">
+			</map>
+            <img src="img/mainPic_04.jpg" usemap="#Map3" class="qiePian" />
+            <map name="Map3">
+				<area shape="rect" coords="10,15,742,419" href="" target="_blank" alt="三文鱼">
+		    </map>
+            <img src="img/mainPic_05.jpg" usemap="#Map4" class="qiePian" />
+            <map name="Map4">
+				<area shape="rect" coords="10,15,724,439" href="" target="_blank" alt="王八">
+		    </map>
+            <img src="img/mainPic_06.jpg" usemap="#Map5" class="qiePian" />
+            <map name="Map5">
+				<area shape="rect" coords="9,18,740,323" href="" target="_blank" alt="龙利鱼">
+		    </map>
+            <img src="img/mainPic_07.jpg" usemap="#Map6" class="qiePian" />
+            <map name="Map6">
+				<area shape="rect" coords="10,133,371,519" href="" target="_blank" alt="海鲜大礼包">
+				<area shape="rect" coords="379,131,741,519" href="" target="_blank" alt="年味一起拼">
+			</map>
+
+            <!--楼层-->
+            <div id="louBox">
+                <div v-for="floor in floorData">
+                    <a :href="louceng[$index].link">
+                        <img :src="louceng[$index].img" class="qiePian" />
+                    </a>
+                    <div id="module-floor{{ $index+1 }}">
+                        <my-component :floor-data="floor"></my-component>
+                    </div>
+                </div>
+            </div>
+
+            <div class="go-top">
+                <div class="goTopBg"></div>
+                <img src="img/go-top.png" />
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function() {
+                $('area').each(function() {
+                    var _scale = $('body').width() / 750,
+                        _coords = $(this).attr('coords').split(','),
+                        _arr = [];
+                    for(var i = 0; i < _coords.length; i++) {
+                        _arr.push(_coords[i] * _scale);
+                    };
+                    $(this).attr('coords', _arr.join());
+                });
+                $(window).on('scroll', function() {
+                    if($(document).scrollTop() > 1000) {
+                        $('.go-top').show()
+                    } else {
+                        $('.go-top').hide()
+                    };
+                });
+                $('.go-top').click(function() {
+                    $("body").animate({
+                        scrollTop: 0
+                    }, 300)
+                });
+            })
+        </script>
+    </body>
+
+</html>
